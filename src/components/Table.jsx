@@ -19,10 +19,15 @@ const TableBody = (props) => {
                <tr key={index}>
                     <td>{row.name}</td>
                     <td>
-                         <a href={row.URL}>{row.URL}</a>
+                         <a href={row.URL} style={{ textDecoration: 'none' }}>
+                              {row.URL}
+                         </a>
                     </td>
                     <td>
-                         <button onClick={() => props.removeLink(index)}>
+                         <button
+                              onClick={() => props.removeLink(index)}
+                              className='btn btn-danger'
+                         >
                               Delete
                          </button>
                     </td>
@@ -35,7 +40,7 @@ const TableBody = (props) => {
 
 function Table({ linkData, removeLink }) {
      return (
-          <table>
+          <table className='table'>
                <TableHeader />
                <TableBody linkData={linkData} removeLink={removeLink} />
           </table>

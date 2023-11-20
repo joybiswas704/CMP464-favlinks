@@ -17,26 +17,43 @@ function Form({ handleSubmit }) {
           handleSubmit({ name: name, URL: URL });
      }
      return (
-          <form>
-               <label htmlFor='linkName'>Link Name:</label>
+          <form className='row g-3 '>
+               <div className='mb-3'>
+                    <label htmlFor='linkName' className='form-label'>
+                         Link Name:
+                    </label>
+                    <input
+                         type='text'
+                         id='linkName'
+                         name='linkName'
+                         onChange={handleChangeName}
+                         className='form-control'
+                    />
+               </div>
+
+               <br />
+               <br />
+               <div className='mb-3'>
+                    <label htmlFor='linkURL' className='form-label'>
+                         Link URL:
+                    </label>
+                    <input
+                         type='text'
+                         id='linkURL'
+                         name='linkURL'
+                         onChange={handleChangeURL}
+                         className='form-control'
+                    />
+               </div>
+
+               <br />
+               <br />
                <input
-                    type='text'
-                    id='linkName'
-                    name='linkName'
-                    onChange={handleChangeName}
-               />
-               <br />
-               <br />
-               <label htmlFor='linkURL'>Link URL:</label>
-               <input
-                    type='text'
-                    id='linkURL'
-                    name='linkURL'
-                    onChange={handleChangeURL}
-               />
-               <br />
-               <br />
-               <input type='submit' value='Submit' onClick={submitForm}></input>
+                    type='submit'
+                    className='btn btn-primary'
+                    value='Submit'
+                    onClick={submitForm}
+               ></input>
           </form>
      );
 }

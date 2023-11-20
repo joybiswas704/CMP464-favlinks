@@ -20,7 +20,7 @@ function Form({ handleSubmit }) {
           <form className='row g-3 '>
                <div className='mb-3'>
                     <label htmlFor='linkName' className='form-label'>
-                         Link Name:
+                         Name:
                     </label>
                     <input
                          type='text'
@@ -35,7 +35,7 @@ function Form({ handleSubmit }) {
                <br />
                <div className='mb-3'>
                     <label htmlFor='linkURL' className='form-label'>
-                         Link URL:
+                         URL:
                     </label>
                     <input
                          type='text'
